@@ -7,9 +7,7 @@ var fs = require("fs");
 var sharp = require("sharp");
 
 app.get("/", function(req, res) {
-	fs.readdir("public/photos/", function(err, items) {
-		res.render("index.ejs", { pictures: items });	
-	});
+	res.render("index.ejs");	
 });
 
 app.get("/get/image/:what", function(req, res) {
