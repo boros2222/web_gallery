@@ -27,7 +27,6 @@ function makeRequest (method, url) {
 }
 
 let pictures = [];
-let numberOfPictures = 0;
 
 makeRequest("GET", "/get/image/all")
 .then(response => {
@@ -39,12 +38,12 @@ makeRequest("GET", "/get/image/all")
 		pictures.forEach(picture => {
 			picturePromises.push(
 				makeRequest("GET", "/get/image/" + picture)
-        	    .then(response => {
+				.then(response => {
 					setupPicture(response, picture);
-            	})
-            	.catch(err => {
-                	console.log(err.statusText);
-            	})
+				})
+				.catch(err => {
+					console.log(err.statusText);
+				})
 			);
 		});
  
