@@ -57,12 +57,28 @@ a:hover {
     text-transform: uppercase;
 }
 
+.bottom {
+    background-color: #1b1b1b;
+    border-radius: 1em 1em 0 0;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    font-size: 1.2em;
+    padding: 0 2em;
+    padding-top: 0.2em;
+    padding-bottom: 0.8em;
+}
+
+.bottom p {
+    text-align: center;
+}
+
 div.pictures {
     background-color: rgba(255, 255, 255, 0.2);
     width: 70%;
     margin: 0 auto;
     margin-top: 10em;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     padding: 2em;
     border-radius: 1em;
     display: grid;

@@ -92,13 +92,18 @@ function arrangePictures(numberOfColumns) {
 	let pictures = document.querySelectorAll("div.pictures img");
 	for(let i = 0; i < pictures.length; i++) {
 		pictures[i].style.position = "relative";
-
-		if(i > numberOfColumns-1) {
-			current = pictures[i];
-			above = pictures[i-numberOfColumns];
-			current.style.top = 0;
-			let offset = -(current.offsetTop - (above.offsetTop + above.height) - 50); // 50 is margin
-			current.style.top = offset;
+		
+		if(numberOfColumns === 1) {
+			pictures[i].style.top = 0;
+		}
+		else {
+			if(i > numberOfColumns-1) {
+				current = pictures[i];
+				above = pictures[i-numberOfColumns];
+				current.style.top = 0;
+				let offset = -(current.offsetTop - (above.offsetTop + above.height) - 50); // 50 is margin
+				current.style.top = offset;
+			}
 		}
 	}
 }
