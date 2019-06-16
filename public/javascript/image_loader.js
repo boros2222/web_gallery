@@ -101,7 +101,7 @@ function arrangePictures(numberOfColumns) {
 				current = pictures[i];
 				above = pictures[i-numberOfColumns];
 				current.style.top = 0;
-				let offset = -(current.offsetTop - (above.offsetTop + above.height) - 50); // 50 is margin
+				let offset = -(current.offsetTop - (above.offsetTop + above.height) - 40); // 40 is margin
 				current.style.top = offset;
 			}
 		}
