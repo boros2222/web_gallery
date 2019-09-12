@@ -32,7 +32,7 @@ app.get("/get/image/:what", function(req, res) {
 	}
 });
 
-app.listen(3003, "0.0.0.0", function() {
+app.listen(3003, "localhost", function() {
 	console.log("Gallery has started!");
 });
 
